@@ -16,7 +16,15 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.TimeUnit
 
-
+/**
+ * MainActivity.
+ *
+ * User can search for images on Imgur and results are fetched
+ * and displyed as a list with title and image
+ *
+ * Both images and gifs are supported. ( video's are skipped and not shown)
+ * @author vinay
+ */
 class MainActivity : AppCompatActivity() {
 
     var imagesAdapter: ImagesAdapter? = null
@@ -31,8 +39,9 @@ class MainActivity : AppCompatActivity() {
         initAdapter()
         initScrollListener()
 
+        // when user types using RxBindings changes are listened and queried
         et_search.textChanges()
-            .debounce(500, TimeUnit.MILLISECONDS)
+            .debounce(250, TimeUnit.MILLISECONDS) // debounce for 250 milliseconds
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { it ->
                 currentPage = 1
@@ -66,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView!!.adapter = imagesAdapter
     }
 
+    // Scroll listener for load more action trigger
     private fun initScrollListener() {
         recyclerView!!.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -83,6 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadMore() {
+        // null object is added which is handled in adapter to show loading progressbar
         imagesList.add(null)
         imagesAdapter!!.notifyItemInserted(imagesList.size - 1)
 

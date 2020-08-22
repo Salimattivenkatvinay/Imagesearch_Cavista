@@ -1,5 +1,19 @@
 package com.vinay.imagesearch.utils;
 
+/**
+ * Constants.
+ *
+ * Constants file to store some app specific details
+ *
+ * <li>
+ * TAG
+ * IMGUR_API
+ * ACCESS_TOKEN
+ * </li>
+ *
+ * @author vinay
+ */
+
 public class Constants {
 
     public final static String TAG = "VIH";

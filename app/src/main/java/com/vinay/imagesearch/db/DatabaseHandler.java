@@ -9,6 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * DatabaseHandler.
+ *
+ * Sqlite database handler helper
+ *
+ * @author vinay
+ */
+
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     public DatabaseHandler(Context context) {
@@ -43,7 +51,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public ArrayList<HashMap<String, String>> getComments(String img_id) {
 
         ArrayList<HashMap<String, String>> alCommentList = new ArrayList<HashMap<String, String>>();
-        // Select Query
+        // Select Query filterinf g based on image id and soting in desc order on time added
         String selectQuery = "SELECT  * FROM tb_comment WHERE image_id='" + img_id + "' ORDER BY time_stamp DESC;";
 
         SQLiteDatabase db = this.getWritableDatabase();

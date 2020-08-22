@@ -6,14 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.vinay.imagesearch.utils.toTitleCase
 import com.vinay.imagesearch.CommentsActivity
 import com.vinay.imagesearch.R
 import com.vinay.imagesearch.models.ImageModel
+
+/**
+ * ImagesAdapter.
+ *
+ * ImagesAdapter for main activity recycle view
+ *
+ * @author vinay
+ */
 
 class ImagesAdapter(var mItemList: List<ImageModel?>?, var context: Context) :
     RecyclerView.Adapter<ViewHolder>() {
@@ -58,6 +68,7 @@ class ImagesAdapter(var mItemList: List<ImageModel?>?, var context: Context) :
     private inner class ItemViewHolder(itemView: View) : ViewHolder(itemView) {
         var tvItem: TextView = itemView.findViewById(R.id.tvItem)
         var ivItem: ImageView = itemView.findViewById(R.id.ivItem)
+        var llItem: LinearLayout = itemView.findViewById(R.id.llItem)
     }
 
     private inner class LoadingViewHolder(itemView: View) : ViewHolder(itemView) {
@@ -70,14 +81,14 @@ class ImagesAdapter(var mItemList: List<ImageModel?>?, var context: Context) :
 
     private fun populateItemRows(viewHolder: ItemViewHolder, position: Int) {
         val item = mItemList!![position]
-        viewHolder.tvItem.text = item?.title
+        viewHolder.tvItem.text = item?.title?.toTitleCase()
 
         Glide.with(context)
             .load(item?.link)
             .thumbnail(.1f)
             .into(viewHolder.ivItem);
 
-        viewHolder.ivItem.setOnClickListener {
+        viewHolder.llItem.setOnClickListener {
             context.startActivity(
                 Intent(context, CommentsActivity::class.java)
                     .putExtra("data", item)

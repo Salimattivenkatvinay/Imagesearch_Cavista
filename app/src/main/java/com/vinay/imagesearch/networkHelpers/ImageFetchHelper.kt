@@ -14,9 +14,24 @@ import io.reactivex.rxjava3.core.ObservableEmitter
 import java.net.URLEncoder
 import java.util.*
 
+/**
+ * ImageFetchHelper.
+ *
+ * to make getImageList static it is defined in a object rather than a class
+ *
+ * Volley library to used to make get query
+ * and Imgur Api is used for fetching image results
+ *
+ * @author vinay
+ */
+
 object ImageFetchHelper {
 
-    fun getImageList(context: Context, currentPage: Int, query: String?): Observable<ArrayList<ImageModel?>?> {
+    fun getImageList(
+        context: Context,
+        currentPage: Int,
+        query: String?
+    ): Observable<ArrayList<ImageModel?>?> {
 
         //Replace white spaces
         val searchQuery = URLEncoder.encode(query, "UTF-8").replace("+", "%20")

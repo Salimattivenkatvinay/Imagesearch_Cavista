@@ -5,9 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.mrittica.utils.convertToDateString
+import com.vinay.imagesearch.utils.convertToDateString
 import com.vinay.imagesearch.R
 import java.util.*
+
+/**
+ * CommentsAdapter.
+ *
+ * CommentsAdapter for comments activity recycle view
+ *
+ * @author vinay
+ */
 
 class CommentsAdapter(private val listdata: ArrayList<HashMap<String, String>>) : RecyclerView.Adapter<CommentsAdapter.ViewHolder>() {
 

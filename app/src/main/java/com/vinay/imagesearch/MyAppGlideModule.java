@@ -9,6 +9,15 @@ import com.bumptech.glide.module.AppGlideModule;
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * MyAppGlideModule.
+ * <p>
+ * Global glide module
+ * </p>
+ *
+ * @author vinay
+ */
+
 @GlideModule
 public final class MyAppGlideModule extends AppGlideModule {
 
