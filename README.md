@@ -46,7 +46,8 @@ Seperate dimension files used for phone and tablets
 Almost all the layouts are made using Constraint layout. 
 
 #### 5. Writing some tests
-Sample unit test for [Convertor util class are added](https://github.com/Salimattivenkatvinay/Imagesearch_Cavista/blob/master/app/src/test/java/com/vinay/imagesearch/utils/ConverterUnitTest.kt) 
+Sample unit test for [Convertor util](https://github.com/Salimattivenkatvinay/Imagesearch_Cavista/blob/master/app/src/test/java/com/vinay/imagesearch/utils/ConverterUnitTest.kt) 
+class are added
 
 #### 6. Loading the next page/ Infinite scroll
 Using `recyclerView!!.addOnScrollListener` loadmore is acheived.
