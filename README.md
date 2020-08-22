@@ -4,6 +4,7 @@
 
 #### 1. Error handling 
 kotlin's (?) is mostly used to catch null exceptions. 
+For network calls proper error handling is done
 
 #### 2. Handling screen rotation
 As this assignemnt required no special changes, on screen orientation activity refresh is handled by adding `android:configChanges="keyboardHidden|orientation|screenSize"`
