@@ -43,8 +43,8 @@
     <ProgressBar
         android:id="@+id/pBSearch"
         style="?android:attr/progressBarStyle"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="@dimen/full_screen_progressbar_dimen"
+        android:layout_height="@dimen/full_screen_progressbar_dimen"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,26 +9,26 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="50dp"
+        android:paddingBottom="@dimen/comments_screen_padding_bottom"
         tools:context=".CommentsActivity">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/image_full_screen_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_chevron_left_white_24dp" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <EditText
             android:id="@+id/et_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/et_comment_margin"
             android:hint="comment"
             android:paddingRight="4dp"
             android:textColor="@android:color/black"

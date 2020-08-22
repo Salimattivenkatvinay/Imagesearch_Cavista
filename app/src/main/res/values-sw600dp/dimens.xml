@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="et_search_size">32sp</dimen>
+    <dimen name="comments_screen_padding_bottom">100dp</dimen>
+    <dimen name="et_comment_margin">8dp</dimen>
+    <dimen name="comment_card_elevation">8dp</dimen>
+    <dimen name="image_full_screen_margin">32dp</dimen>
+    <dimen name="full_screen_progressbar_dimen">500dp</dimen>
+</resources>
