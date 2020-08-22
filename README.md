@@ -12,9 +12,9 @@ to each activity in manifest file
 
 #### 3. architecture patterns
 MVC pattern is followed with 
-Models - bussiness logic in helpers, utils and model classes
-Views - XML files for UI
-Controller - Activity and adapter classes to controll views and models.
+1. Models - bussiness logic in helpers, utils and model classes
+2. Views - XML files for UI
+3. Controller - Activity and adapter classes to controll views and models.
 
 #### 4. Clear code documentation
 Every class is provided with java style documentation comments and also additional comments in between for better understanding of code. 
